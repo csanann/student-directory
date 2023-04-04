@@ -22,21 +22,25 @@ def print_header
     puts "The Students of Villains Academy"
     puts "------------------------------"
 end
-
-#To print a number before the name of each student, 
-#by using .each(), .each_with_index()
-#output is 1. Dr. Hannibal Lecter (november cohort)
-def print(students)
+#--------------------------------------------------
+#print method that takes 'letter' parameter to filter the specific names
+def print(students, letter)
+    #loop iterates through the students array
     students.each_with_index do |student, index|
-        puts "#(index + 1). #{student[:name]} (#{students[:cohort]} cohort)"
+        #check if the first letter matches the specified letter
+        if student[:name][0].upcase == letter.upcase
+        puts "#{index + 1}. #{student[:name] } (#{student[:cohort] } cohourt)"
+        end
     end
 end
-
+#---------------------------------------------------^^^^
 def print_footer(students)
     puts "Overall, we have #{students.count} great students"
 end
 #call out the methods above
-students = input_students
 print_header
-print(students)
+#---------------------------------------------------
+#display out only the students whose names begin with letter A
+print(students, 'A')
+#---------------------------------------------------^^^^
 print_footer(students)
