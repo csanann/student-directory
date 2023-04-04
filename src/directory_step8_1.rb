@@ -23,9 +23,12 @@ def print_header
     puts "------------------------------"
 end
 
+#To print a number before the name of each student, 
+#by using .each(), .each_with_index()
+#output is 1. Dr. Hannibal Lecter (november cohort)
 def print(students)
-    students.each do |student|
-        puts "#{student[:name]} (#{students[:cohort]} cohort)"
+    students.each_with_index do |student, index|
+        puts "#(index + 1). #{student[:name]} (#{students[:cohort]} cohort)"
     end
 end
 
