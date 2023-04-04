@@ -1,16 +1,23 @@
+#an array that store students information
+students = [
+    "DR. Hannibal Lecter",
+    "Darth Vader",
+    "Nurse Ratched",
+    "Michael Corleone",
+    "Alex Delarge",
+    "The Wicked Witch of the West",
+    "Terminator",
+    "Freddy Krueger",
+    "The Joker",
+    "Joffrey Baratheon",
+    "Norman Bates",
+    ]
+#print them out    
 puts "The Students of Villains Academy"
 puts "------------------------------"
-puts "DR. Hannibal Lecter"
-puts "Darth Vader"
-puts "Nurse Ratched"
-puts "Michael Corleone"
-puts "Alex Delarge"
-puts "The Wicked Witch of the West"
-puts "Terminator"
-puts "Freddy Krueger"
-puts "The Joker"
-puts "Joffrey Baratheon"
-puts "Norman Bates"
-print "Overall, we have "
-print 11
-puts " great students"
+#replace with block of each do
+students.each do |student|
+    puts student
+end
+#finally, we print the total number of students
+print "Overall, we have #{student.count} great students"
