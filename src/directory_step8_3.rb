@@ -31,7 +31,7 @@ def print(students, letter)
     students.each_with_index do |student, index|
     name = student[:name]
         #modify a condition in the loop for only name that has characters less than 12
-        if name[0].upcase == letter.upcase &&  name.length < 12
+        if name[0].upcase == letter.upcase && name.length < 12
             puts "#{index + 1}. #{name } (#{student[:cohort] } cohourt)"
         end
     end
