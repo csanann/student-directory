@@ -16,7 +16,7 @@ def input_students
         loop do
             puts "Enter email address: "
             email_address = gets.chomp
-            break if email_address.include?(@)
+            break if email_address.include?("@")
             puts "Invalid email address. Please enter a valie email address."
         end
         
