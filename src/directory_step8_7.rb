@@ -20,9 +20,11 @@ def input_students
         until valid_cohorts.include?(cohort_input) || cohort_input.empty?
         puts "Invalid cohort. Please enter a valid cohort"
         cohort_input = gets.chomp.downcase.to_sym
-    
+        end
+        
         puts "Enter student number: "
         student_number = gets.chomp.to_i
+        
         email_address = ""
         loop do
             #loop will keep on asking the user to enter the input with @, the loop will break to the next step when has one
@@ -38,7 +40,7 @@ def input_students
         hobbies = gets.chomp
         
         #set a default ochort value if the cohort input is empty
-        cohort_input = cohort_input.empty? ? :november :cohort_input
+        cohort_input = cohort_input.empty? ? :november : cohort_input
         #add the student details as a hash to the students array
         students << {name: name, cohort: cohort, student_number: student_number, email_address: email_address, phone_number: phone_number, hobbies: hobbies}
         
