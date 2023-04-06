@@ -1,5 +1,5 @@
 #an empty array accessible to all methods
-@ students = []
+@students = []
 
 def interactive_menu
     loop do
